@@ -3,7 +3,6 @@ import { BoxReveal } from "./magicui/box-reveal";
 import { TextAnimate } from "@/components/magicui/text-animate";
 import gsap from "gsap";
 import "../app/globals.css";
-import { useEffect, useRef } from "react";
 const Page1 = () => {
   return (
     <div>

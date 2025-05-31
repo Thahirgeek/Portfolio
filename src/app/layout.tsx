@@ -1,11 +1,7 @@
 "use client";
 
-import type { Metadata } from "next";
 import "./globals.css";
-import { SmoothCursor } from "@/components/ui/smooth-cursor";
-import gsap from "gsap";
 import Navbar from "@/components/navbar";
-import Page1 from "@/components/page1";
 import Cursor from "@/components/cursor";
 import Menu from "@/components/menu";
 import PageTransition from "@/components/PageTransition";

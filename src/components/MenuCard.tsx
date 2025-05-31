@@ -4,7 +4,6 @@ import gsap from "gsap";
 import { Dispatch, SetStateAction } from "react";
 import { FaLinkedin } from "react-icons/fa";
 import { RiTwitterXFill } from "react-icons/ri";
-import { useRouter } from "next/navigation";
 
 const Variants = {
   open: {

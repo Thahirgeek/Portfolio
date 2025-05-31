@@ -1,12 +1,6 @@
 "use client";
-import { AuroraText } from "@/components/magicui/aurora-text";
-import { BoxReveal } from "@/components/magicui/box-reveal";
-import { TextAnimate } from "@/components/magicui/text-animate";
-import "./globals.css";
 import Page1 from "@/components/page1";
 import { useEffect } from "react";
-import gsap from "gsap";
-import Cursor from "@/components/cursor";
 import Footer from "@/components/footer";
 import Lenis from "lenis";
 
