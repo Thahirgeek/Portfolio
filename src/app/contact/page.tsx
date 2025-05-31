@@ -37,9 +37,9 @@ const Contact = () => {
   );
 
   return (
-    <div className="min-h-screen mb-10 pt-15 flex flex-wrap sm:items-center max-sm:items-start justify-evenly">
+    <div className="min-h-screen mb-10 pt-15 flex sm: items-center justify-evenly max-sm:flex-col max-sm:items-center max-sm:justify-start  max-sm:gap-10">
       {animatedText}
-      <div className="w-fit h-fit rounded-xl pl-5 pr-5">
+      <div className="w-100 h-fit rounded-xl flex items-center justify-center ">
         <AnimatePresence mode="wait">
           {!isActive ? (
             <motion.div
@@ -48,6 +48,7 @@ const Contact = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
+              className=""
             >
               <Form setIsActive={setIsActive} />
             </motion.div>
@@ -58,16 +59,16 @@ const Contact = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="text-zinc-900 sm:p-15 max-sm:p-8 rounded-xl"
+              className="text-zinc-900 sm:p-15 max-sm:p-8 rounded-xl w-fit"
             >
-              <div className="font-[clash] w-fit">
-                <h1 className="text-center lg:text-5xl md:text-3xl sm:text-2xl max-sm:text-4xl sm:pt-10 sm:pb-10 max-sm:pt-5 max-sm:pb-5 border-t border-b rounded-s bg-zinc-900 text-white transition-colors duration-300">
+              <div className="font-[clash] w-fit h-fit">
+                <h1 className="text-center lg:text-5xl md:text-3xl sm:text-2xl max-sm:text-[8vw] sm:pt-10 sm:pb-10 max-sm:pt-5 max-sm:pb-5 max-sm:pl-3 max-sm:pr-3 border-t border-b rounded-s bg-zinc-900 text-white transition-colors duration-300">
                   Email&apos;s old school
                 </h1>
-                <h2 className="text-center lg:text-4xl md:text-2xl sm:text-xl max-sm:text-2xl mt-20 tracking-wider border-b rounded-sm">
+                <h2 className="text-center lg:text-4xl md:text-2xl sm:text-xl max-sm:text-[6vw] mt-20 tracking-wider border-b rounded-sm">
                   Find me on my socials
                 </h2>
-                <div className="flex items-center justify-between mt-10 sm:text-2xl max-sm:text-xl gap-2">
+                <div className="flex items-center justify-between mt-10 sm:text-2xl max-sm:text-[5vw] gap-1">
                   <Link
                     href="https://www.linkedin.com/in/thahirdottsx"
                     onMouseEnter={() =>
