@@ -39,7 +39,7 @@ const Contact = () => {
   return (
     <div className="min-h-screen mb-10 pt-15 flex flex-wrap sm:items-center max-sm:items-start justify-evenly">
       {animatedText}
-      <div className="w-[40vmax] h-fit rounded-xl pl-5 pr-5">
+      <div className="w-fit h-fit rounded-xl pl-5 pr-5">
         <AnimatePresence mode="wait">
           {!isActive ? (
             <motion.div
@@ -67,7 +67,7 @@ const Contact = () => {
                 <h2 className="text-center lg:text-4xl md:text-2xl sm:text-xl max-sm:text-2xl mt-20 tracking-wider border-b rounded-sm">
                   Find me on my socials
                 </h2>
-                <div className="flex items-center justify-between mt-10 sm:text-2xl max-sm:text-xl gap-1">
+                <div className="flex items-center justify-between mt-10 sm:text-2xl max-sm:text-xl gap-2">
                   <Link
                     href="https://www.linkedin.com/in/thahirdottsx"
                     onMouseEnter={() =>
