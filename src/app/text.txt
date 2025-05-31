@@ -1,0 +1,236 @@
+<div className="h-[100%] flex flex-col justify-end text-[#1f1f1f] border-1 border-zinc-500 rounded-lg">
+      <div className="text-[25vh] font-[] inline-block w-full ">
+        <h1 className="intro text-[23vh] font-[clash] tracking-wider leading-[20vh]">Hi I'm</h1>
+        {/* <AuroraText className="inline-block uppercase font-[clash] tracking-[2px]">Thahir</AuroraText> */}
+        <BoxReveal>
+          <p className="leading-none uppercase font-[panchang] text-[15vw]">Thahir</p>       
+        </BoxReveal>
+        
+        </div>
+
+    </div>
+
+
+<div className="relative h-screen bg-zinc-50 pl-[3vmax] pr-[3vmax] flex flex-col">
+            <nav className="bg-zinc-50 flex items-center justify-between border-b-1 border-zinc-500 fixed left-0 right-0 top-0 sm:p-4 sm:pr-6 sm:pl-6 max-sm:p-3 max-sm:pl-4 max-sm:pr-4 font-[clash]">
+              <h1 className="sm:text-2xl max-sm:text-xl uppercase tracking-wide">Portfolio</h1>
+              <ul className="text-md flex gap-[1.2vmax] tracking-wider">
+                <li className="w-[11vh] h-[200%] pt-0.5 pb-0.5 text-center border-1 border-zinc-300 max-sm:scale-0 rounded-full"><Link href="/">Home</Link></li>    
+                <li className="w-[11vh] h-[200%] pt-0.5 pb-0.5 text-center border-1 border-zinc-300 max-sm:scale-0 rounded-full"><Link href="/projects">Projects</Link></li>
+                <li className="w-[11vh] h-[200%] pt-0.5 pb-0.5 text-center border-1 border-zinc-300 max-sm:scale-0 rounded-full"><Link href="/contact">Contact</Link></li>
+              </ul>
+            </nav>
+            <div className="flex-1">{children}</div>
+          </div>
+
+
+
+<div
+      ref={menuRef}
+      onMouseEnter={() => gsap.to("#cursor", { scale: 1.5, duration: 0.3 })}
+      onMouseLeave={() => gsap.to("#cursor", { scale: 1, duration: 0.3 })}
+      className="fixed top-3 right-4 opacity-0 scale-0 z-[99]"
+    >
+      <button className="relative bg-zinc-800 text-white sm:pl-3 sm:pr-3 sm:pt-0.5 sm:pb-0.5 max-sm:p-2 rounded-full sm:text-4xl max-sm:text-xl pointer-events-none font-[clash]">
+        ≡
+        <div className="fixed bg-zinc-500 h-[65vh] w-[20vw] top-[-10%] right-[-10%] z-[-1]"></div>
+      </button>
+    </div>
+
+
+    <motion.ul
+            variants={VariantsLinks}
+            animate={isHovering ? "open" : "closed"}
+            initial="closed"
+            className="bg-emerald-400 ml-5 flex flex-col gap-5 font-[clash] text-2xl"
+          >
+            <li>Projects</li>
+            <li>Contact</li>
+            <li>LinkedIn</li>
+          </motion.ul>
+
+
+
+import { TextAnimate } from "@/components/magicui/text-animate";
+
+const Contact = () => {
+  return <div className=" min-h-screen flex items-center justify-evenly gap-0 max-xl:pt-20">
+    <div className="font-[panchangbold] sm:text-[8vmax] max-sm:text-[6vmax] leading-none">
+        <TextAnimate animation="blurInUp" by="line" delay={0} once>I reply</TextAnimate>
+        <TextAnimate animation="blurInUp" by="line" delay={0.1} once>faster</TextAnimate>
+        <TextAnimate animation="blurInUp" by="line" delay={0.2} once>than</TextAnimate>
+        <TextAnimate animation="blurInUp" by="line" delay={0.3} once>ChatGPT</TextAnimate>
+        {/* <h1>I reply<br></br>faster<br></br>than<br></br>ChatGPT</h1> */}
+    </div>
+    <div className="w-[500px] h-[400px] rounded-xl pl-5 pr-5">
+        <form className="sm:text-[2vmax] max-sm:text-2xl font-[clash] flex flex-col sm:gap-10 max-sm:gap-3 sm:ml-3">
+            <label className="flex flex-col gap-2">Your name
+                <input type="text" placeholder="Name" className="outline-none border-b border-b-zinc-300 transition-colors duration-300 hover:border-b-zinc-800 sm:text-[1.5vmax] max-sm:text-lg text-zinc-800"></input>
+            </label>
+            <label className="flex flex-col gap-2">Your email<br></br>
+                <input type="email" placeholder="Email" className="outline-none border-b border-b-zinc-300 transition-colors duration-300 hover:border-b-zinc-800 sm:text-[1.5vmax] max-sm:text-lg text-zinc-800"></input>
+            </label>
+            <label className="flex flex-col gap-2">Message<br></br>
+                <textarea rows={5} placeholder="I'm Listening" className="resize-none outline-none border-b border-b-zinc-300 transition-colors duration-300 hover:border-b-zinc-800 sm:text-[1.5vmax] max-sm:text-lg text-zinc-800"></textarea>
+            </label>
+            <button className="bg-zinc-900 text-white p-1 rounded-lg">Send</button>
+        </form>
+    </div>
+  </div>;
+};
+
+export default Contact;
+
+
+
+menu card
+
+import { motion } from "framer-motion";
+import Link from "next/link";
+import gsap from "gsap";
+import { Dispatch, SetStateAction } from "react";
+import { FaLinkedin } from "react-icons/fa";
+import { RiTwitterXFill } from "react-icons/ri";
+
+
+const Variants = {
+  open: {
+    width: "250px",
+    height: "400px",
+    top: -3,
+    right: -3,
+    transition: { duration: 0.75, type: "tween", ease: [0.76, 0, 0.24, 1] },
+  },
+  closed: {
+    width: "100%",
+    height: "100%",
+    transition: {
+      duration: 0.75,
+      delay: 0.15,
+      type: "tween",
+      ease: [0.76, 0, 0.24, 1],
+    },
+  },
+};
+
+const VariantsLinks2 = {
+  open: {
+    opacity: 1,
+    transition: { duration: 0.75, type: "tween", ease: [0.76, 0, 0.24, 1] },
+  },
+  closed: {
+    opacity: 0,
+    transition: {
+      duration: 0.75,
+      delay: 0.15,
+      type: "tween",
+      ease: [0.76, 0, 0.24, 1],
+    },
+  },
+};
+
+const VariantsLinks1 = {
+  open: {
+    fontSize: "2em",
+    opacity: 1,
+    transition: { duration: 0.75, type: "tween", ease: [0.76, 0, 0.24, 1] },
+  },
+  closed: {
+    fontSize: "0em",
+    opacity: 0,
+    transition: {
+      duration: 0.75,
+      delay: 0.15,
+      type: "tween",
+      ease: [0.76, 0, 0.24, 1],
+    },
+  },
+};
+
+interface Prop {
+  isActive: boolean;
+  setIsActive: Dispatch<SetStateAction<boolean>>;
+}
+
+const MenuCard = ({isActive, setIsActive}: Prop) => {
+  return <motion.div
+          variants={Variants}
+          animate={isActive ? "open" : "closed"}
+          initial="closed"
+          className="absolute top-0 right-0 rounded-lg bg-zinc-800 flex flex-col items-start justify-between overflow-hidden"
+        >
+          <motion.ul
+            variants={VariantsLinks1}
+            animate={isActive ? "open" : "closed"}
+            initial="closed"
+            className="font-[clash] ml-5 mt-[2em]"
+          >
+            <li>
+              <Link
+                href="/projects"
+                onMouseEnter={() =>
+                  gsap.to("#cursor", { scale: 1.8, duration: 0.25 })
+                }
+                onMouseLeave={() =>
+                  gsap.to("#cursor", { scale: 1, duration: 0.25 })
+                }
+                onClick={() => setIsActive(false)}
+                className="text-zinc-300 hover:text-white transition-colors duration-300"
+              >
+                - Projects
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/contact"
+                onMouseEnter={() =>
+                  gsap.to("#cursor", { scale: 1.8, duration: 0.25 })
+                }
+                onMouseLeave={() =>
+                  gsap.to("#cursor", { scale: 1, duration: 0.25 })
+                }
+                onClick={() => setIsActive(false)}
+                className="text-zinc-300 hover:text-white transition-colors duration-300"
+              >
+                - Contact
+              </Link>
+            </li>
+          </motion.ul>
+          <motion.div
+            variants={VariantsLinks2}
+            animate={isActive ? "open" : "closed"}
+            initial="closed"
+            className="w-full flex items-center justify-between mb-3 pl-5 pr-5 text-zinc-300 font-[clash] text-xl border-b border-zinc-300"
+          >
+            <Link
+              onMouseEnter={() =>
+                gsap.to("#cursor", { scale: 1.8, duration: 0.25 })
+              }
+              onMouseLeave={() =>
+                gsap.to("#cursor", { scale: 1, duration: 0.25 })
+              }
+              onClick={() => setIsActive(false)}
+              className="hover:text-white transition-colors duration-300 flex items-center justify-center gap-1"
+              href="https://www.linkedin.com/in/thahirdottsx"
+            >
+              LinkedIn<FaLinkedin className=""/>
+            </Link>
+            <Link
+              onMouseEnter={() =>
+                gsap.to("#cursor", { scale: 1.5, duration: 0.25 })
+              }
+              onMouseLeave={() =>
+                gsap.to("#cursor", { scale: 1, duration: 0.25 })
+              }
+              onClick={() => setIsActive(false)}
+              className="hover:text-white transition-colors duration-300"
+              href="https://x.com/thahirdottsx"
+            >
+              <RiTwitterXFill className="text-zinc-300 hover:text-white" />
+            </Link>
+          </motion.div>
+          {/* <div className="bg-zinc-500 h-[1px] w-full absolute bottom-6"></div> */}
+        </motion.div>
+};
+
+export default MenuCard;
