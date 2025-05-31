@@ -17,7 +17,7 @@ const Contact = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
-        className="font-[panchangbold] md:text-[8vmax] sm:text-5xl max-sm:text-6xl leading-none border-t border-b border-zinc-600 max-sm:mt-10 pt-3 pb-3"
+        className="font-[panchangbold] md:text-[8vmax] sm:text-[10vw] max-sm:text-[14vw] leading-none border-t border-b border-zinc-600 max-sm:mt-10 pt-3 pb-3"
       >
         <TextAnimate animation="blurInUp" by="line" delay={0.4} once>
           I &nbsp;reply
