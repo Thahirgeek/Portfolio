@@ -2,10 +2,8 @@ import { Dispatch, SetStateAction } from "react";
 import gsap from "gsap";
 
 const Form = ({
-  isActive,
   setIsActive,
 }: {
-  isActive: boolean;
   setIsActive: Dispatch<SetStateAction<boolean>>;
 }) => {
   return (

@@ -5,7 +5,7 @@ import { TextAnimate } from "@/components/magicui/text-animate";
 import { AnimatePresence, motion } from "framer-motion";
 import gsap from "gsap";
 import Link from "next/link";
-import { useMemo, useRef, useState } from "react";
+import { useMemo, useState } from "react";
 import { RiTwitterXFill } from "react-icons/ri";
 
 const Contact = () => {
@@ -49,7 +49,7 @@ const Contact = () => {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
             >
-              <Form isActive={isActive} setIsActive={setIsActive} />
+              <Form setIsActive={setIsActive} />
             </motion.div>
           ) : (
             <motion.div
@@ -62,7 +62,7 @@ const Contact = () => {
             >
               <div className="font-[clash] w-fit">
                 <h1 className="text-center lg:text-5xl md:text-3xl sm:text-2xl max-sm:text-4xl sm:pt-10 sm:pb-10 max-sm:pt-5 max-sm:pb-5 border-t border-b rounded-s bg-zinc-900 text-white transition-colors duration-300">
-                  Email's old school
+                  Email&apos;s old school
                 </h1>
                 <h2 className="text-center lg:text-4xl md:text-2xl sm:text-xl max-sm:text-2xl mt-20 tracking-wider border-b rounded-sm">
                   Find me on my socials

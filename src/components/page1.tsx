@@ -64,7 +64,7 @@ const Page1 = () => {
           </div>
         </div>
         <h1 className="leading-none sm:font-[panchanglight] max-sm:font-[thunder] sm:text-[8vmax] max-sm:text-[9vmax] pl-1">
-          Hi I'm a
+          Hi I&apos;m a
         </h1>
         <BoxReveal>
           <h1

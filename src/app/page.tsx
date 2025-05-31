@@ -9,7 +9,7 @@ const Home = () => {
     const lenis = new Lenis({
       lerp: 0.05,
     });
-    const raf = (time: any) => {
+    const raf = (time: number) => {
       lenis.raf(time);
       requestAnimationFrame(raf);
     };
