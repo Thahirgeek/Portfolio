@@ -72,7 +72,7 @@ const Page1 = () => {
               gsap.to("#cursor", { scale: 12, duration: 0.5 })
             }
             onMouseLeave={() => gsap.to("#cursor", { scale: 1, duration: 0.5 })}
-            className="sm:font-[panchangbold] max-sm:font-[humanesemibold] sm:text-[12vmax] max-sm:text-[23vmax] text-center leading-none"
+            className="sm:font-[panchangbold] max-sm:font-[humanesemibold] sm:text-[12vmax] max-sm:text-[50vw] text-center leading-none"
           >
             Developer
           </h1>
